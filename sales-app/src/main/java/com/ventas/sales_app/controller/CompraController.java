@@ -32,7 +32,7 @@ public class CompraController {
             Optional<Producto> prodOpt = productoRepository.findById(p.getId());
             if (prodOpt.isEmpty()) return "Producto no encontrado: " + p.getNombre();
             if (prodOpt.get().getStock() < p.getCantidad()) {
-                return "No hay suficiente stock de " + p.getNombre();
+                return "No tenemos suficiente stock de " + p.getNombre();
             }
         }
 
